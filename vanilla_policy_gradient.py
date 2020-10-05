@@ -18,7 +18,6 @@ def mlp(sizes, activation=nn.Tanh, output_activation=nn.Identity):
     return nn.Sequential(*layers)
 
 def reward_to_go(rews,gamma):
-    # taken from file 2_rtg_pg.py
     n = len(rews)
     rtgs = np.zeros_like(rews)
     for i in reversed(range(n)):
